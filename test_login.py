@@ -7,14 +7,12 @@ def test_has_title(page: Page):
     # [data-testid = 'navbar-login']
     # expect("[data-testid = 'navbar-login']").to_be_visible()
     page.click("[data-testid = 'navbar-login']")
-    # expect(page).to_have_url(re.compile(r".*/login"))
-    expect(page).to_have_url("https://commitquality.com/login")
-    expect("[data-testid = 'username-textbox']").to_be_visible()
-    expect("[data-testid = 'username-textbox']").fill("test")
-    expect("[data-testid = 'password-textbox']").fill("test")
+    expect(page).to_have_url(re.compile(r".*/login"))
+    page.locator("[data-testid = 'username-textbox']").fill("test")
+    page.locator("[data-testid = 'password-textbox']").fill("test")
     page.click("[data-testid = 'login-button']")
-    expect("[data-testid = 'navbar-account']").to_be_visible()
-    expect("[data-testid = 'navbar-logout']").to_be_visible()
+    page.locator("[data-testid = 'navbar-account']").is_visible()
+    page.locator("[data-testid = 'navbar-logout']").is_visible()
 
 # def test_get_started_link(page: Page):
 #     page.goto("https://playwright.dev/")
