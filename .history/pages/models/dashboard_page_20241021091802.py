@@ -16,11 +16,8 @@ class DashboardPage():
         
         #check that table is not empty
 
-    def is_filter_table(self):
+    def is_filter_table(self, page: Page):
         self.filter_field.fill("Product 1")
         self.filter_button.click()
-        expect(self.table_rows).to_have_count(5)
+        self.table_rows.to_have_count(5)
 
-    def is_reset_filter(self):
-        self.filter_reset.click()
-        expect(self.table_rows).not_to_have_count(5)

@@ -5,7 +5,7 @@ class NavbarLocators:
 
 class TableLocators:
     PRODUCT_TABLE = ".product-list-table"
-    TABLE_ROWS = ".product-list-table tbody tr"
+    TABLE_ROWS = "tr"
     FILTER_TABLE = ".filter-textbox"
     FILTER_BUTTON = "[data-testid = 'filter-button']"
-    FILTER_RESET_BUTTON = "[data-testid = 'reset-filter-button']"
+    FILTER_RESET_BUTTON = "[data-testid = 'reset filter-button']"

@@ -23,4 +23,4 @@ class DashboardPage():
 
     def is_reset_filter(self):
         self.filter_reset.click()
-        expect(self.table_rows).not_to_have_count(5)
+        expect(self.table_rows).to

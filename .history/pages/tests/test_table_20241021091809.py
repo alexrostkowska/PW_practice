@@ -18,4 +18,3 @@ def test_filter_table(page: Page, pytestconfig: pytest.Config):
 
     main_page.is_filter_table()
 
-    main_page.is_reset_filter()

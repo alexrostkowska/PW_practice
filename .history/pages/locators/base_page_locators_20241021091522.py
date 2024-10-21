@@ -8,4 +8,4 @@ class TableLocators:
     TABLE_ROWS = ".product-list-table tbody tr"
     FILTER_TABLE = ".filter-textbox"
     FILTER_BUTTON = "[data-testid = 'filter-button']"
-    FILTER_RESET_BUTTON = "[data-testid = 'reset-filter-button']"
+    FILTER_RESET_BUTTON = "[data-testid = 'reset filter-button']"
