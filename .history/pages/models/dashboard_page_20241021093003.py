@@ -2,8 +2,6 @@ from itertools import count
 from playwright.sync_api import Page, expect
 
 from locators.base_page_locators import TableLocators as tabloc
-from locators.base_page_locators import NavbarLocators as navloc
-import re
 
 class DashboardPage():
     def __init__(self, page: Page):
@@ -12,7 +10,6 @@ class DashboardPage():
         self.filter_button = page.locator(tabloc.FILTER_BUTTON)
         self.filter_reset = page.locator(tabloc.FILTER_RESET_BUTTON)
         self.table_rows = page.locator(tabloc.TABLE_ROWS)
-        self.add_product = page.locator(navloc.ADD_PRODUCT_BUTTON)
 
     def is_product_table(self):
         expect(self.table).to_be_visible()
@@ -28,11 +25,10 @@ class DashboardPage():
         self.filter_reset.click()
         expect(self.table_rows).not_to_have_count(5)
     
-    def is_add_product(self, page: Page):
+    def is_add_product(self):
         #click add product
-        page.goto("https://commitquality.com/")
-        self.add_product.click()
-        expect(page).to_have_url(re.compile(".*/addproduct"))
+        self.add.click()
+
         #fill form
         #submit form
         #check that product is in table

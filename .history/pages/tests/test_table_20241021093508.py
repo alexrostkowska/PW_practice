@@ -21,7 +21,6 @@ def test_filter_table(page: Page, pytestconfig: pytest.Config):
     main_page.is_reset_filter()
 
 def test_add_product(page: Page):
-    main_page = DashboardPage(page)
     main_page.is_add_product(page)
     # main_page.is_product_in_table(page)
     # main_page.is_product_in_database(page)

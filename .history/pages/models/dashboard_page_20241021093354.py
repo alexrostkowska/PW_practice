@@ -12,7 +12,7 @@ class DashboardPage():
         self.filter_button = page.locator(tabloc.FILTER_BUTTON)
         self.filter_reset = page.locator(tabloc.FILTER_RESET_BUTTON)
         self.table_rows = page.locator(tabloc.TABLE_ROWS)
-        self.add_product = page.locator(navloc.ADD_PRODUCT_BUTTON)
+        self.add_product = page.locator(tabloc.ADD_PRODUCT_BUTTON)
 
     def is_product_table(self):
         expect(self.table).to_be_visible()
@@ -30,9 +30,8 @@ class DashboardPage():
     
     def is_add_product(self, page: Page):
         #click add product
-        page.goto("https://commitquality.com/")
         self.add_product.click()
-        expect(page).to_have_url(re.compile(".*/addproduct"))
+        expect(page).to_have_url(re.compile(r".*/addproduct"))
         #fill form
         #submit form
         #check that product is in table

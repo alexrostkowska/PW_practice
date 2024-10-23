@@ -2,7 +2,7 @@ class NavbarLocators:
     LOGIN_BUTTON = "[data-testid = 'navbar-login']"
     MY_ACCOUNT_BUTTON = "[data-testid = 'navbar-account']"
     LOGOUT_BUTTON = "[data-testid = 'navbar-logout']"
-    ADD_PRODUCT_BUTTON = "[data-testid='navbar-addproduct']"
+    ADD_PRODUCT_BUTTON = "[data-testid='navbar-addproduct'"
 
 class TableLocators:
     PRODUCT_TABLE = ".product-list-table"

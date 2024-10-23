@@ -32,7 +32,7 @@ class DashboardPage():
         #click add product
         page.goto("https://commitquality.com/")
         self.add_product.click()
-        expect(page).to_have_url(re.compile(".*/addproduct"))
+        expect(page).to_have_url(re.compile(r".*/addproduct"))
         #fill form
         #submit form
         #check that product is in table
